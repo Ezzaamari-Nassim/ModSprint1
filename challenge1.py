@@ -4,7 +4,7 @@
 """
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.image as mpg
+#import matplotlib.image as mpg
 
 R = 0 * np.ones((5,100), dtype = np.uint8)
 G = 0 * np.ones((5,100), dtype = np.uint8)
