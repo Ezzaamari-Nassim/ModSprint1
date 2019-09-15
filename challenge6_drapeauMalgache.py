@@ -10,17 +10,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpg
 
-im = np.zeros((400,600,3), dtype=np.uint8)
+largeur = 600
+longueur = int(largeur * 2/3)
+
+c = int(longueur * 1/2)
+
+im = np.zeros((longueur,largeur,3), dtype=np.uint8)
 
 im[:,:] = 255
 
-im[0:200,200:600:1,0] = 255
-im[0:200,200:600:1,1] = 0
-im[0:200,200:600:1,2] = 0
+im[0:c,c:c*3:1] = [255,0,0]
 
-im[200:400,200:600:1,0] = 0
-im[200:400,200:600:1,1] = 255
-im[200:400,200:600:1,2] = 0
+im[c:c*2,c:c*3:1] = [0,255,0]
 
 
 plt.imshow(im)

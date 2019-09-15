@@ -10,13 +10,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpg
 
-im = np.zeros((500,800,3), dtype=np.uint8)
+largeur = 800
+longueur = int(largeur * 5/8)
 
-im[0:250,:] = 255
+c = int(longueur/2)
 
-im[250:500,:,0] = 227
-im[250:500,:,1] = 66
-im[250:500,:,2] = 52
+im = np.zeros((longueur,largeur,3), dtype=np.uint8)
+
+im[0:c,:] = 255
+
+im[c:2*c,:] = [227,66,52]
 
 plt.imshow(im)
 mpg.imsave('Flag/DrapeauPolonais.png', im)
