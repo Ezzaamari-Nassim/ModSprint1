@@ -25,4 +25,4 @@ im[:,400:600:1,1] = 25
 im[:,400:600:1,2] = 32
 
 plt.imshow(im)
-mpg.imsave('Flag/DrapeauFrançais.png', im)
+mpg.imsave('Flag/DrapeauFrancais.png', im)
