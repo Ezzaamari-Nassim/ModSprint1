@@ -19,3 +19,6 @@ im = np.rot90(im)
 
 plt.imshow(im)
 mpg.imsave('Flag/Challenge1bis.png', im)
+
+#https://numpy.org/doc/1.17/reference/routines.array-manipulation.html
+#Rearranging elements
