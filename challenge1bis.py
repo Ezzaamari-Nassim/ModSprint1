@@ -15,7 +15,7 @@ tabBool =tabBool%10 < 5
 im = np.zeros((50,100,3), dtype=np.uint8)
 im[tabBool]=255
 
-im = im.reshape((100,50,3))
+im = np.rot90(im)
 
 plt.imshow(im)
 mpg.imsave('Flag/Challenge1bis.png', im)
