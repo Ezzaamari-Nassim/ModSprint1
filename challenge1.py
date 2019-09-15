@@ -1,28 +1,19 @@
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-Éditeur de Spyder
+Created on Sun Sep 15 13:46:56 2019
+
+@author: nguyent
 """
 import numpy as np
 import matplotlib.pyplot as plt
-#import matplotlib.image as mpg
+import matplotlib.image as mpg
 
-R = 0 * np.ones((5,100), dtype = np.uint8)
-G = 0 * np.ones((5,100), dtype = np.uint8)
-B = 0 * np.ones((5,100), dtype = np.uint8)
+tabBool = np.arange(0,50)
+tabBool =tabBool%10 < 5
 
-R1 = 255 * np.ones((5,100), dtype = np.uint8)
-G1 = 255 * np.ones((5,100), dtype = np.uint8)
-B1 = 255 * np.ones((5,100), dtype = np.uint8)
+im = np.zeros((50,100,3), dtype=np.uint8)
+im[tabBool]=255
 
-rectangle = np.stack ((R,G,B), axis = 2)
-rectangle1 = np.stack ((R1,G1,B1), axis = 2)
-
-bande = np.concatenate((rectangle, rectangle1), axis = 0)
-
-petiDrapeau = np.concatenate((bande, bande), axis = 0)
-
-grandDrapeau = np.concatenate((petiDrapeau, petiDrapeau), axis = 0)
-
-drapeau = np.concatenate((grandDrapeau, bande), axis = 0)
-
-plt.imshow(drapeau)
+plt.imshow(im)
+mpg.imsave('Flag/Challenge1.png', im)
