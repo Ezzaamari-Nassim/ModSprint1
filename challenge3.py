@@ -10,9 +10,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpg
 
-im = np.zeros((60,256,3), dtype=np.uint8)
-#im[:,0:256:1] = np.linspace(0,255,256)
-im[:,0:100,2] = 255
-#print(np.linspace(0,255,256))
+x = np.arange(0,256)
+y = np.arange(0,60)
+
+X, Y = np.meshgrid(x,y)
+
+im = np.stack((X,X,X), axis = 2)
+
 plt.imshow(im)
 mpg.imsave('Flag/Challenge3.png', im)
