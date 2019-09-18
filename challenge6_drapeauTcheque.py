@@ -27,6 +27,8 @@ I, J = np.meshgrid(\
                     np.arange(800, dtype = np.int64),\
                     indexing = 'ij')
 
+print(I)
+
 im[np.logical_and(I >= J, I <= 500 - J)] = np.array([0, 0, 255], dtype = np.uint8)
 
 plt.imshow(im)
